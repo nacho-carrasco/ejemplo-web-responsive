@@ -142,10 +142,12 @@
                 <label for="password">Contraseña:</label><br>
                 <input type="password" id="password" name="password" min="7" required><br><br>
                 <div class="modal-footer">
-                    <button value="cancel" class="button-cancel"
-                    id="closeModal">Cancelar</button>
+                    
+                    <button type="button" value="cancel" class="button-cancel"
+                    id="cancelModal">Cancelar</button>
                     <button type="submit" value="Submit" class="button-suscription"
-                    id="closeModal">Suscribirme</button>
+                    id="">Suscribirme</button>
+                    
                 </div>
               </form>
         </div>
@@ -155,15 +157,14 @@
         // Obtener el botón y la modal
         const subscribeButton = document.getElementById('subscribeButton');
         const maskModal = document.getElementById('maskModal');
-        const closeModal = document.getElementById('closeModal');
+        const cancelModal = document.getElementById('cancelModal');
 
         // Añadir evento click al botón
         subscribeButton.addEventListener('click', function() {
             maskModal.classList.add('display-modal');
         });
 
-        // Añadir evento click al botón
-        closeModal.addEventListener('click', function() {
+        cancelModal.addEventListener('click', function() {
             maskModal.classList.remove('display-modal');
         });
     </script>
