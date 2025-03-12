@@ -11,15 +11,18 @@
 <body>
 
     <header class="menu-container">
-        <nav class="menu-options">
-            <button class="menu-button"><span class="material-symbols-outlined">
-                menu
-                </span></button>
-            <div class="logo"><link rel="stylesheet" href="#"><img src="./assets/images/el-pais.svg" alt=""></div>
-        </nav>
-        <button class="button-suscription" id="subscribeButton">
-            Suscribirme
-        </button>
+        <div class="menu-wraper">
+            <nav class="menu-options">
+                <button class="menu-button"><span class="material-symbols-outlined">
+                    menu
+                    </span></button>
+                <div class="logo"><link rel="stylesheet" href="#"><img src="./assets/images/el-pais.svg" alt=""></div>
+            </nav>
+            <button class="button-suscription" id="subscribeButton">
+                Suscribirme
+            </button>
+        </div>
+        
     </header>
     <main class="content">
         <div class="cabecera">
@@ -129,12 +132,21 @@
     <div class="mask" id="maskModal">
         <div class="modal">
             <h3>Suscríbete al periódico</h3>
-            <form action="#">
+            <form>
                 <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre"><br><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
                 <label for="apellidos">Apellidos:</label><br>
-                <input type="text" id="apellidos" name="apellidos"><br><br>
-                <button type="submit" form="form1" value="Submit" class="button-suscription" id="closeModal">Suscribirme</button>
+                <input type="text" id="apellidos" name="apellidos" required><br><br>
+                <label for="apellidos">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" min="7" required><br><br>
+                <div class="modal-footer">
+                    <button value="cancel" class="button-cancel"
+                    id="closeModal">Cancelar</button>
+                    <button type="submit" value="Submit" class="button-suscription"
+                    id="closeModal">Suscribirme</button>
+                </div>
               </form>
         </div>
     </div>

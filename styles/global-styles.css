@@ -25,24 +25,33 @@ p{
 }
 
 .menu-container{
+    position:sticky;
+    top:0;
+    width: 100%;
     padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-content: center;
-    gap: 16px;
     background-color: #fafafa;
     border-bottom: var(--border-gray);
     /*box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);*/
 }
 
-nav.menu-options{
+.menu-wraper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1248px;
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: space-between;
     align-content: center;
     gap: 16px;
+}
 
+nav.menu-options{
+    display: flex;
+    height:100%;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 16px;
 }
 
 .menu-button{
@@ -62,11 +71,13 @@ nav.menu-options{
 }
 
 .menu-options .logo{
+    height: 24px;
     display: flex;
     flex-direction: row;
     justify-content: left;
-    align-content: center;
+    align-items: center;
     object-fit: contain;
+
 }
 
 .menu-options .logo img{
@@ -248,25 +259,57 @@ div.mask.display-modal{
     border: var(--border-gray);
     padding:24px 32px;
     border-radius: 12px;
-    max-width: 700px;
+    max-width: 800px;
     min-width: 200px;
     min-height: 150px;
     margin: 32px;
 
 }
 
+.modal h3{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
 input{
+    font-family: sans-serif;
+    min-width: 350px;
     border: 1px solid #bebebe;
     border-radius: 4px;
-    height: 24px;
+    height: 32px;
     padding: 2px 8px;
     font-size: 16px;
     color: #111111;
 }
 
 label{
+    font-family: sans-serif;
+    font-weight: 500;
     display: inline-block;
     margin-bottom: 4px;
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 16px;
+    justify-content: right;
+    align-items: center;
+}
+
+.button-cancel{
+    border-radius: var(--border-radius-8px);
+    background-color: white;
+    border: var(--border-gray);
+    color: var(--tx-dark);
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-cancel:hover{
+    background-color: rgb(240, 240, 240);
 }
 
 @media only screen and (min-width:650px){
@@ -276,7 +319,7 @@ label{
 }
 
 @media only screen and (min-width: 1000px){
-    .menu-container{
+    .menu-wraper{
         flex-direction: row;
     }
 
